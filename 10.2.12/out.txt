@@ -1,3 +1,0 @@
-Toy Car 30 15
-Food Milk 75 22
-Furniture Chair 367.5 60
