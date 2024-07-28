@@ -1,0 +1,4 @@
+aboba: 0 7
+desk: 9
+pen: 6 8
+pensil: 5

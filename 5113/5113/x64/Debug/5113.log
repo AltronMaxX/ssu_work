@@ -1,0 +1,4 @@
+﻿  Main.cpp
+C:\Users\user\Documents\repos\5113\5113\Main.cpp(16,20): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\user\Documents\repos\5113\5113\Main.cpp(22,9): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+  5113.vcxproj -> C:\Users\user\Documents\repos\5113\x64\Debug\5113.exe
