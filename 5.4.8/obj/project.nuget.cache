@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CGebnVVgs0yOkKOZp7MMLJFidL1OCCZ5KhpORYOfsglSMHLUp+bmxIBzEKbl8RdYe5LRB6N6SNbgUJl67P/JSQ==",
+  "success": true,
+  "projectFilePath": "/home/AltronMaxX/ssu_work/5.4.8/5.4.8.csproj",
+  "expectedPackageFiles": [
+    "/home/AltronMaxX/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.8/microsoft.aspnetcore.app.ref.8.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

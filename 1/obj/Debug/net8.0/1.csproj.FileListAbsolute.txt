@@ -1,0 +1,15 @@
+/home/AltronMaxX/ssu_work/1/bin/Debug/net8.0/1
+/home/AltronMaxX/ssu_work/1/bin/Debug/net8.0/1.deps.json
+/home/AltronMaxX/ssu_work/1/bin/Debug/net8.0/1.runtimeconfig.json
+/home/AltronMaxX/ssu_work/1/bin/Debug/net8.0/1.dll
+/home/AltronMaxX/ssu_work/1/bin/Debug/net8.0/1.pdb
+/home/AltronMaxX/ssu_work/1/obj/Debug/net8.0/1.GeneratedMSBuildEditorConfig.editorconfig
+/home/AltronMaxX/ssu_work/1/obj/Debug/net8.0/1.AssemblyInfoInputs.cache
+/home/AltronMaxX/ssu_work/1/obj/Debug/net8.0/1.AssemblyInfo.cs
+/home/AltronMaxX/ssu_work/1/obj/Debug/net8.0/1.csproj.CoreCompileInputs.cache
+/home/AltronMaxX/ssu_work/1/obj/Debug/net8.0/1.sourcelink.json
+/home/AltronMaxX/ssu_work/1/obj/Debug/net8.0/1.dll
+/home/AltronMaxX/ssu_work/1/obj/Debug/net8.0/refint/1.dll
+/home/AltronMaxX/ssu_work/1/obj/Debug/net8.0/1.pdb
+/home/AltronMaxX/ssu_work/1/obj/Debug/net8.0/1.genruntimeconfig.cache
+/home/AltronMaxX/ssu_work/1/obj/Debug/net8.0/ref/1.dll
