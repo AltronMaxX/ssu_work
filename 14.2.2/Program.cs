@@ -1,17 +1,28 @@
-﻿Student[] students = [new Student("Ivanov Ivan Ivanovich", 221, [3, 5, 4]), new Student("Petrov Petr Petrovich", 251, [4, 3, 2]), 
-    new Student("Ivanov Andrew Ivanovich", 221, [4, 5, 5]), new Student("Petrov Maxim Maximovich", 251, [4, 5, 3])];
+﻿List<Student> students = new List<Student>();
 
-Array.Sort(students);
+using (StreamReader studentsReader = new StreamReader("./students.txt")) {
+    while (!studentsReader.EndOfStream) {
+        string line = studentsReader.ReadLine();
+        string[] studentsData = line.Split(';', StringSplitOptions.RemoveEmptyEntries);
 
-StreamWriter writer = new StreamWriter("./studentsList.txt");
-
-foreach (Student student in students) {
-    if (student.PassedExams()) {
-        writer.WriteLine(student.ToString());
+        if (studentsData.Length == 5) {
+            students.Add(new Student(studentsData[0], int.Parse(studentsData[1]), 
+                [uint.Parse(studentsData[2]), uint.Parse(studentsData[3]), uint.Parse(studentsData[4])]));
+        } else {
+            Console.WriteLine("Неверно заданы данные студента {0}", line);
+        }
     }
 }
 
-writer.Flush();
+students.Sort();
+
+using (StreamWriter writer = new StreamWriter("./studentsList.txt")) {
+    foreach (Student student in students) {
+        if (student.PassedExams()) {
+            writer.WriteLine(student.ToString());
+        }
+    }
+}
 
 struct Student : IComparable<Student>{
     public string FIO;
@@ -39,8 +50,6 @@ struct Student : IComparable<Student>{
 
     public int CompareTo(Student other)
     {
-        if (group == other.group) return 0;
-        if (group < other.group) return -1;
-        return 1;
+        return group.CompareTo(other.group);
     }
 }

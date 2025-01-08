@@ -1,4 +1,15 @@
-﻿SPoint[] points = [new SPoint(10, 12, 1), new SPoint(1, 11, 12), new SPoint(4, 3, 2), new SPoint(11, 1, 12)];
+﻿List<SPoint> points = new List<SPoint>();
+using (StreamReader pointsReader = new StreamReader("./points.txt")) {
+    while (!pointsReader.EndOfStream) {
+        string line = pointsReader.ReadLine();
+        string[] coords = line.Split(',', StringSplitOptions.RemoveEmptyEntries);
+        if (coords.Length == 3) {
+            points.Add(new SPoint(int.Parse(coords[0]), int.Parse(coords[1]), int.Parse(coords[2])));
+        } else {
+            Console.WriteLine("Неверно заданна точка в строке {0}", line);
+        }
+    }
+}
 
 List<SPoint> maxPoints = new List<SPoint>();
 

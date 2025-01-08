@@ -1,31 +1,35 @@
-﻿int[][] DeleteColumns(int[][] matrix, int n)
+﻿void DeleteColumns(int[][] matrix)
 {
-    bool[] needToRemove = new bool[n];
-
-    for (int i = 0; i < n; i++)
+    Transpose(matrix);
+    int newColumnsCount = matrix.Length - matrix.Count(col => col.First() > col.Last());
+    for (int i = 0; i < matrix.Length; i++)
     {
-        needToRemove[i] = matrix[0][i] > matrix[n - 1][i] ? true : false;
+        if (matrix[i].First() > matrix[i].Last())
+        {
+            for (int j = matrix.Length - 1; j >= 0 && j != i; j--) {
+                matrix[i] = matrix[j];
+                matrix[j] = new int[matrix.Length];
+            }
+        }
     }
 
-    if (needToRemove.All(bol => bol)) return [[]];
-
-    int[][] ret = new int[n][];
-    int newRowsCount = needToRemove.Count(bol => !bol);
-    for (int i = 0; i < n; i++) {
-        ret[i] = new int[newRowsCount];
+    Transpose(matrix);
+    for (int i = 0; i < matrix.Length; i++) {
+        Array.Resize(ref matrix[i], newColumnsCount);
     }
+}
 
-    for (int i = 0; i < n; i++) {
-        int colCount = 0;
-        for (int j = 0; j < n; j++) {  
-            if (needToRemove[j]) 
-                continue;  
-            ret[i][colCount] = matrix[i][j];
-            colCount++;   
-        }   
+void Transpose(int[][] matrix)
+{
+    for (int i = 0; i < matrix.Length; i++)
+    {
+        for (int j = i + 1; j < matrix[i].Length; j++)
+        {
+            int temp = matrix[i][j];
+            matrix[i][j] = matrix[j][i];
+            matrix[j][i] = temp;
+        }
     }
-
-    return ret;
 }
 
 void PrintMatrix(int[][] matrix)
@@ -40,10 +44,8 @@ void PrintMatrix(int[][] matrix)
     }
 }
 
-const int n = 4;
-
 int[][] matrix = [
-    [ 1, 11, 6, 19 ],
+    [ 1, 1, 69, 19 ],
     [ 5, 6, 7, 8 ],
     [ 9, 10, 11, 12 ],
     [ 13, 3, 7, 16 ]
@@ -52,7 +54,7 @@ int[][] matrix = [
 Console.WriteLine("Исходная матрица:");
 PrintMatrix(matrix);
 
-matrix = DeleteColumns(matrix, n);
+DeleteColumns(matrix);
 
 Console.WriteLine("\nИзмененная матрица:");
 PrintMatrix(matrix);

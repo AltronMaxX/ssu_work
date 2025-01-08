@@ -1,0 +1,7 @@
+7
+Petrov Petr Petrovich;2004;Pushkina 10;7
+10
+Ivanov Ivan Ivanovich;2003;Sobachkina 5;10
+Denisov Maxim Alekseevich;2005;Musatova 13;10
+15
+Denisov Denis Denisovich;2005;Placeholederov 5;15
