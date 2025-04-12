@@ -1,5 +1,0 @@
-Ivanov2 Andrew Ivanovich	111	4:5:5
-Ivanov Ivan Ivanovich	221	3:5:4
-Ivanov Andrew Ivanovich	221	4:5:5
-Ivanov1 Ivan Ivanovich	221	5:5:4
-Petrov Petr Petrovich	251	4:3:4

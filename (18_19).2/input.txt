@@ -1,7 +1,0 @@
-line;1;0
-line;10;1
-kub;2;4;3
-kub;0;1;15
-hyperbola;4;15
-line;4;10
-hyperbola;1;4
