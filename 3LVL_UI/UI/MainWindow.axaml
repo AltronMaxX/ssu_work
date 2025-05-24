@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
+        x:Class="UI.MainWindow"
+        Title="Калькулятор функций">
+    <StackPanel>
+        <Border Margin="5" CornerRadius="10" Background="LightBlue">
+            <TextBlock Margin="5"
+                       FontSize="24" 
+                       HorizontalAlignment="Center"
+                       Text="Калькулятор функций">
+            </TextBlock>
+        </Border>
+
+        <Button HorizontalAlignment="Center" Click="PrintAll_OnClick">Вывести все существующие функции</Button>
+        <Button HorizontalAlignment="Center" Click="AddFunction_OnClick">Добавить новую функцию</Button>
+        <Button HorizontalAlignment="Center" Click="FindFunction_OnClick">Найти функцию новую функцию</Button>
+    </StackPanel>
+</Window>

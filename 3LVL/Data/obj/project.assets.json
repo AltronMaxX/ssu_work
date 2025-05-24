@@ -1,26 +1,45 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "Entities >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "/home/AltronMaxX/.nuget/packages/": {}
+    "/home/altronmaxx/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/AltronMaxX/ssu_work/3LVL/Data/Data.csproj",
+      "projectUniqueName": "/home/altronmaxx/ssu_work/3LVL/Data/Data.csproj",
       "projectName": "Data",
-      "projectPath": "/home/AltronMaxX/ssu_work/3LVL/Data/Data.csproj",
-      "packagesPath": "/home/AltronMaxX/.nuget/packages/",
-      "outputPath": "/home/AltronMaxX/ssu_work/3LVL/Data/obj/",
+      "projectPath": "/home/altronmaxx/ssu_work/3LVL/Data/Data.csproj",
+      "packagesPath": "/home/altronmaxx/.nuget/packages/",
+      "outputPath": "/home/altronmaxx/ssu_work/3LVL/Data/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/AltronMaxX/.nuget/NuGet/NuGet.Config"
+        "/home/altronmaxx/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -31,7 +50,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/altronmaxx/ssu_work/3LVL/Entities/Entities.csproj": {
+              "projectPath": "/home/altronmaxx/ssu_work/3LVL/Entities/Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -63,7 +86,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[9.0.3, 9.0.3]"
+            "version": "[9.0.4, 9.0.4]"
           }
         ],
         "frameworkReferences": {
@@ -71,7 +94,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.104/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

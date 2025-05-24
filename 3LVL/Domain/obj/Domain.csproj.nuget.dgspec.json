@@ -1,20 +1,161 @@
 {
   "format": 1,
   "restore": {
-    "/home/AltronMaxX/ssu_work/3LVL/Domain/Domain.csproj": {}
+    "/home/altronmaxx/ssu_work/3LVL/Domain/Domain.csproj": {}
   },
   "projects": {
-    "/home/AltronMaxX/ssu_work/3LVL/Domain/Domain.csproj": {
+    "/home/altronmaxx/ssu_work/3LVL/Data/Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/AltronMaxX/ssu_work/3LVL/Domain/Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "/home/AltronMaxX/ssu_work/3LVL/Domain/Domain.csproj",
-        "packagesPath": "/home/AltronMaxX/.nuget/packages/",
-        "outputPath": "/home/AltronMaxX/ssu_work/3LVL/Domain/obj/",
+        "projectUniqueName": "/home/altronmaxx/ssu_work/3LVL/Data/Data.csproj",
+        "projectName": "Data",
+        "projectPath": "/home/altronmaxx/ssu_work/3LVL/Data/Data.csproj",
+        "packagesPath": "/home/altronmaxx/.nuget/packages/",
+        "outputPath": "/home/altronmaxx/ssu_work/3LVL/Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/AltronMaxX/.nuget/NuGet/NuGet.Config"
+          "/home/altronmaxx/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/altronmaxx/ssu_work/3LVL/Entities/Entities.csproj": {
+                "projectPath": "/home/altronmaxx/ssu_work/3LVL/Entities/Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.4, 9.0.4]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/altronmaxx/ssu_work/3LVL/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/altronmaxx/ssu_work/3LVL/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/home/altronmaxx/ssu_work/3LVL/Domain/Domain.csproj",
+        "packagesPath": "/home/altronmaxx/.nuget/packages/",
+        "outputPath": "/home/altronmaxx/ssu_work/3LVL/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/altronmaxx/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/altronmaxx/ssu_work/3LVL/Data/Data.csproj": {
+                "projectPath": "/home/altronmaxx/ssu_work/3LVL/Data/Data.csproj"
+              },
+              "/home/altronmaxx/ssu_work/3LVL/Entities/Entities.csproj": {
+                "projectPath": "/home/altronmaxx/ssu_work/3LVL/Entities/Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.4, 9.0.4]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/altronmaxx/ssu_work/3LVL/Entities/Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/altronmaxx/ssu_work/3LVL/Entities/Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "/home/altronmaxx/ssu_work/3LVL/Entities/Entities.csproj",
+        "packagesPath": "/home/altronmaxx/.nuget/packages/",
+        "outputPath": "/home/altronmaxx/ssu_work/3LVL/Entities/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/altronmaxx/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -57,7 +198,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[9.0.3, 9.0.3]"
+              "version": "[9.0.4, 9.0.4]"
             }
           ],
           "frameworkReferences": {
@@ -65,7 +206,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfFunction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Function xsi:type="Kub">
+    <A>3</A>
+    <B>5</B>
+    <C>19</C>
+  </Function>
+  <Function xsi:type="Line">
+    <A>18</A>
+    <B>42</B>
+  </Function>
+  <Function xsi:type="Hyperbola">
+    <A>2</A>
+    <B>5</B>
+  </Function>
+  <Function xsi:type="Line">
+    <A>7</A>
+    <B>18</B>
+  </Function>
+  <Function xsi:type="Line">
+    <A>5</A>
+    <B>10</B>
+  </Function>
+  <Function xsi:type="Line">
+    <A>5</A>
+    <B>10</B>
+  </Function>
+</ArrayOfFunction>

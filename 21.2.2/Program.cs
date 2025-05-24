@@ -49,10 +49,15 @@ public class AVLTree
         }
 
         public void NewHeight()
-        {
-            int rh = (this.rigth != null) ? this.rigth.Height : 0;
-            int lh = (this.left != null) ? this.left.Height : 0;
-            this.height = ((rh > lh) ? rh : lh) + 1;
+        {         
+            if (this.rigth != null || this.left != null)
+            {
+                int rh = (this.rigth != null) ? this.rigth.Height : 0;
+                int lh = (this.left != null) ? this.left.Height : 0;
+                this.height = ((rh > lh) ? rh : lh) + 1;
+            }
+            else
+                this.height = 0;
         }
 
         public static void Add(ref Node? r, int nodeInf)

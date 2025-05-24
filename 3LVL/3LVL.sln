@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{2542991B-517C-D793-B55D-A8766344C1D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{D422E858-E918-433F-9B53-E25234A6D002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{5076B0BA-D255-4CE3-8CC5-7450BAC0EDF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{DE86EC9E-11F1-57BA-2854-A3B93D22FB63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95DE3BD9-A587-35A9-17E0-3C34D2A57441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DE3BD9-A587-35A9-17E0-3C34D2A57441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DE3BD9-A587-35A9-17E0-3C34D2A57441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DE3BD9-A587-35A9-17E0-3C34D2A57441}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B38573D3-6661-4C72-92F4-F1F4452F964E}
+	EndGlobalSection
+EndGlobal

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Xj+Slym5Dys=",
+  "dgSpecHash": "YfXi1cMP0uw=",
   "success": true,
-  "projectFilePath": "/home/AltronMaxX/ssu_work/3LVL/Domain/Domain.csproj",
+  "projectFilePath": "/home/altronmaxx/ssu_work/3LVL/Domain/Domain.csproj",
   "expectedPackageFiles": [
-    "/home/AltronMaxX/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.3/microsoft.aspnetcore.app.ref.9.0.3.nupkg.sha512"
+    "/home/altronmaxx/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.4/microsoft.aspnetcore.app.ref.9.0.4.nupkg.sha512"
   ],
   "logs": []
 }
