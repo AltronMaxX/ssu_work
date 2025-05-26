@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
+        x:Class="UI.FindFuncWindow"
+        Title="Калькулятор функций"
+        SizeToContent="WidthAndHeight"
+        MinWidth="300"
+        MinHeight="200">
+    <StackPanel Margin="20" Spacing="10">
+        <TextBox x:Name="indexInput" Watermark="Индекс функции"/>
+        <TextBox x:Name="xInput" Watermark="Точка X для расчета"/>
+        <StackPanel Orientation="Horizontal" Spacing="5">
+            <Button Content="Найти значение" Click="Find_Click"/>
+            <Button Content="Удалить функцию" Click="Delete_Click"/>
+        </StackPanel>
+        <TextBlock x:Name="resultText" TextWrapping="Wrap"/>
+    </StackPanel>
+</Window>

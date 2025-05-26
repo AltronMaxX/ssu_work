@@ -11,20 +11,18 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    private void PrintAll_OnClick(object? sender, RoutedEventArgs e)
+    private void ShowAllFunctions_Click(object sender, RoutedEventArgs e)
     {
-        var printAll = new PrintAllWindow();
-        printAll.Show();
+        new PrintAllWindow().Show();
     }
 
-    private void AddFunction_OnClick(object? sender, RoutedEventArgs e)
+    private void AddFunction_Click(object sender, RoutedEventArgs e)
     {
-        var window = new AddFunctionWindow();
-        window.Show();
+        new AddFunctionWindow().Show();
     }
 
-    private void FindFunction_OnClick(object? sender, RoutedEventArgs e)
+    private void FindFunction_Click(object sender, RoutedEventArgs e)
     {
-        Debug.WriteLine("Click!");
+        new FindFuncWindow().Show();
     }
 }

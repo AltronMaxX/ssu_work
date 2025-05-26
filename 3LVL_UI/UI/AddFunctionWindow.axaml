@@ -4,30 +4,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
         x:Class="UI.AddFunctionWindow"
-        Title="Калькулятор функций">
-    <StackPanel>
-        <Border Margin="5" CornerRadius="10" Background="LightBlue">
-            <TextBlock Margin="5"
-                       FontSize="24" 
-                       HorizontalAlignment="Center"
-                       Text="Добавить функцию">
-            </TextBlock>
-        </Border>
-        <TextBlock Margin="5"
-                       FontSize="24" 
-                       HorizontalAlignment="Center"
-                       Text="Введите значения и нажмите на кнопку для добавления функции"
-                       Name="ChooseText">
-            </TextBlock>
-        <Button Grid.Row="0" Grid.Column="0" Click="Kub_OnClick" Name="Kub">Кубическая</Button>
-        <TextBox Grid.Row="1" Grid.Column="0" Name="Kub_A"/>
-        <TextBox Grid.Row="2" Grid.Column="0" Name="Kub_B"/>
-        <TextBox Grid.Row="3" Grid.Column="0" Name="Kub_C"/>
-        <Button Grid.Row="0" Grid.Column="1" Click="Line_OnClick" Name="Line">Линейная</Button>
-        <TextBox Grid.Row="1" Grid.Column="1" Name="Line_A"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Name="Line_B"/>
-        <Button Grid.Row="0" Grid.Column="2" Click="Hyperbola_OnClick" Name="Hyperbola">Гиперболическая</Button>
-        <TextBox Grid.Row="1" Grid.Column="2" Name="Hyperbola_A"/>
-        <TextBox Grid.Row="2" Grid.Column="2" Name="Hyperbola_B"/>
-    </StackPanel>
+        Title="Калькулятор функций"
+        SizeToContent="WidthAndHeight"
+        MinWidth="300"
+        MinHeight="200">
+        <StackPanel Margin="20">
+        <ComboBox x:Name="typeComboBox" SelectedIndex="0" MaxDropDownHeight="100">
+            <ComboBoxItem>Линейная</ComboBoxItem>
+            <ComboBoxItem>Квадратичная</ComboBoxItem>
+            <ComboBoxItem>Гипербола</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="paramA" Watermark="Параметр a"/>
+        <TextBox x:Name="paramB" Watermark="Параметр b"/>
+        <TextBox x:Name="paramC" Watermark="Параметр c" IsVisible="False"/>
+        <Button Content="Добавить" Click="Add_Click"/>
+        </StackPanel>
 </Window>

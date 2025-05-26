@@ -4,7 +4,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
         x:Class="UI.PrintAllWindow"
-        Title="Калькулятор функций">
+        Title="Калькулятор функций"
+        SizeToContent="WidthAndHeight"
+        MinWidth="300"
+        MinHeight="200">
     <StackPanel>
         <Border Margin="5" CornerRadius="10" Background="LightBlue">
             <TextBlock Margin="5"

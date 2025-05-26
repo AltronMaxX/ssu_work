@@ -4,8 +4,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
         x:Class="UI.MainWindow"
-        Title="Калькулятор функций">
-    <StackPanel>
+        Title="Калькулятор функций"
+        SizeToContent="WidthAndHeight"
+        MinWidth="300"
+        MinHeight="200">
+    <StackPanel Margin="20" Spacing="10">
         <Border Margin="5" CornerRadius="10" Background="LightBlue">
             <TextBlock Margin="5"
                        FontSize="24" 
@@ -14,8 +17,8 @@
             </TextBlock>
         </Border>
 
-        <Button HorizontalAlignment="Center" Click="PrintAll_OnClick">Вывести все существующие функции</Button>
-        <Button HorizontalAlignment="Center" Click="AddFunction_OnClick">Добавить новую функцию</Button>
-        <Button HorizontalAlignment="Center" Click="FindFunction_OnClick">Найти функцию новую функцию</Button>
+        <Button Content="Показать все функции" Click="ShowAllFunctions_Click"/>
+        <Button Content="Добавить функцию" Click="AddFunction_Click"/>
+        <Button Content="Найти по индексу" Click="FindFunction_Click"/>
     </StackPanel>
 </Window>

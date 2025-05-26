@@ -1,42 +1,39 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using System.Diagnostics;
+using Entities.Abstract;
 using Entities;
 
 namespace UI;
 
 public partial class AddFunctionWindow : Window
 {
+
     public AddFunctionWindow()
     {
         InitializeComponent();
-
+        typeComboBox.SelectionChanged += OnTypeChanged;
     }
 
-    private void Kub_OnClick(object? sender, RoutedEventArgs e)
+    private void OnTypeChanged(object sender, SelectionChangedEventArgs e)
     {
-        if (float.TryParse(Kub_A.Text, out float a) && float.TryParse(Kub_B.Text, out float b) && float.TryParse(Kub_C.Text, out float c))
-        {
-            var func = new Kub(a, b, c);
-            ((App)App.Current).FunctionService.AddFunction(func);
-        }        
+        paramC.IsVisible = typeComboBox.SelectedIndex == 1;
     }
 
-    private void Line_OnClick(object? sender, RoutedEventArgs e)
+    private void Add_Click(object sender, RoutedEventArgs e)
     {
-        if (float.TryParse(Line_A.Text, out float a) && float.TryParse(Line_B.Text, out float b))
-        {
-            var func = new Line(a, b);
-            ((App)App.Current).FunctionService.AddFunction(func);
-        }
-    }
+        if (!float.TryParse(paramA.Text, out float a) || 
+            !float.TryParse(paramB.Text, out float b)) return;
 
-    private void Hyperbola_OnClick(object? sender, RoutedEventArgs e)
-    {
-        if (float.TryParse(Hyperbola_A.Text, out float a) && float.TryParse(Hyperbola_B.Text, out float b))
+        Function func = typeComboBox.SelectedIndex switch
         {
-            var func = new Hyperbola(a, b);
-            ((App)App.Current).FunctionService.AddFunction(func);
-        }
+            0 => new Line { A = a, B = b },
+            1 when float.TryParse(paramC.Text, out float c) => new Kub { A = a, B = b, C = c },
+            2 => new Hyperbola { A = a, B = b },
+            _ => null
+        };
+
+        if (func != null) ((App)App.Current).FunctionService.AddFunction(func);
+        Close();
     }
 }   

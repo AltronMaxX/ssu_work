@@ -17,14 +17,6 @@
     <A>7</A>
     <B>18</B>
   </Function>
-  <Function xsi:type="Line">
-    <A>5</A>
-    <B>10</B>
-  </Function>
-  <Function xsi:type="Line">
-    <A>5</A>
-    <B>10</B>
-  </Function>
   <Function xsi:type="Kub">
     <A>4</A>
     <B>189</B>
@@ -33,5 +25,13 @@
   <Function xsi:type="Line">
     <A>1</A>
     <B>21</B>
+  </Function>
+  <Function xsi:type="Line">
+    <A>848</A>
+    <B>115</B>
+  </Function>
+  <Function xsi:type="Hyperbola">
+    <A>1</A>
+    <B>9</B>
   </Function>
 </ArrayOfFunction>
