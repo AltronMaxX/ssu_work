@@ -22,5 +22,6 @@
                        Text=""
                        Name="FunctionsOutput">
             </TextBlock>
+        <Button Content="Выйти" Click="Exit_Click"/>
     </StackPanel>
 </Window>

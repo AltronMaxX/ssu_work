@@ -18,5 +18,6 @@
         <TextBox x:Name="paramB" Watermark="Параметр b"/>
         <TextBox x:Name="paramC" Watermark="Параметр c" IsVisible="False"/>
         <Button Content="Добавить" Click="Add_Click"/>
+        <Button Content="Выйти" Click="Exit_Click"/>
         </StackPanel>
 </Window>

@@ -34,4 +34,17 @@
     <A>1</A>
     <B>9</B>
   </Function>
+  <Function xsi:type="Kub">
+    <A>651</A>
+    <B>10</B>
+    <C>99</C>
+  </Function>
+  <Function xsi:type="Hyperbola">
+    <A>21</A>
+    <B>1</B>
+  </Function>
+  <Function xsi:type="Hyperbola">
+    <A>515</A>
+    <B>120</B>
+  </Function>
 </ArrayOfFunction>

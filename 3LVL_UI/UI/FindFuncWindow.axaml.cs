@@ -15,7 +15,7 @@ public partial class FindFuncWindow : Window
 
     private void Find_Click(object sender, RoutedEventArgs e)
     {
-        if (!int.TryParse(indexInput.Text, out var index) || 
+        if (!int.TryParse(indexInput.Text, out var index) ||
             index < 0 || index >= ((App)App.Current).FunctionService.GetAllFunctions().Count ||
             !float.TryParse(xInput.Text, out var x))
         {
@@ -29,7 +29,7 @@ public partial class FindFuncWindow : Window
 
     private void Delete_Click(object sender, RoutedEventArgs e)
     {
-        if (!int.TryParse(indexInput.Text, out var index) || 
+        if (!int.TryParse(indexInput.Text, out var index) ||
             index < 0 || index >= ((App)App.Current).FunctionService.GetAllFunctions().Count)
         {
             resultText.Text = "Некорректный индекс!";
@@ -38,5 +38,10 @@ public partial class FindFuncWindow : Window
 
         ((App)App.Current).FunctionService.RemoveFunction(index);
         resultText.Text = $"Функция с индексом {index} удалена";
+    }
+    
+    private void Exit_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
     }
 }

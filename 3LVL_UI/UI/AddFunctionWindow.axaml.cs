@@ -22,7 +22,7 @@ public partial class AddFunctionWindow : Window
 
     private void Add_Click(object sender, RoutedEventArgs e)
     {
-        if (!float.TryParse(paramA.Text, out float a) || 
+        if (!float.TryParse(paramA.Text, out float a) ||
             !float.TryParse(paramB.Text, out float b)) return;
 
         Function func = typeComboBox.SelectedIndex switch
@@ -34,6 +34,10 @@ public partial class AddFunctionWindow : Window
         };
 
         if (func != null) ((App)App.Current).FunctionService.AddFunction(func);
+        Close();
+    }
+    private void Exit_Click(object sender, RoutedEventArgs e)
+    {
         Close();
     }
 }   

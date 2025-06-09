@@ -16,5 +16,6 @@
             <Button Content="Удалить функцию" Click="Delete_Click"/>
         </StackPanel>
         <TextBlock x:Name="resultText" TextWrapping="Wrap"/>
+        <Button Content="Выйти" Click="Exit_Click"/>
     </StackPanel>
 </Window>

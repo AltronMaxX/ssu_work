@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using System;
 using System.Diagnostics;
 
 namespace UI;
@@ -13,16 +14,32 @@ public partial class MainWindow : Window
 
     private void ShowAllFunctions_Click(object sender, RoutedEventArgs e)
     {
-        new PrintAllWindow().Show();
+        var window = new PrintAllWindow();
+        window.Show();
+        window.Closed += OnClosing;
     }
 
     private void AddFunction_Click(object sender, RoutedEventArgs e)
     {
-        new AddFunctionWindow().Show();
+        var window = new AddFunctionWindow();
+        window.Show();
+        window.Closed += OnClosing;
     }
 
     private void FindFunction_Click(object sender, RoutedEventArgs e)
     {
-        new FindFuncWindow().Show();
+        var window = new FindFuncWindow();
+        window.Show();
+        window.Closed += OnClosing;
+    }
+
+    private void OnClosing(object? sender, EventArgs e)
+    {
+        Activate();
+    }
+
+    private void Exit_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
     }
 }
