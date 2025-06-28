@@ -41,6 +41,8 @@ public class BinaryTree
         public Node left;
         public Node right;
         public int counter;
+        public int maxRange = 200;
+        public int minRange = -200;
 
         public Node(int nodeInf)
         {
@@ -55,23 +57,19 @@ public class BinaryTree
             if (r == null)
             {
                 r = new Node(nodeInf);
+                r.minRange = minVal;
+                r.maxRange = maxVal;
             }
             else
             {
                 r.counter++;
                 if (nodeInf < r.inf)
                 {
-                    if (nodeInf >= minVal)
-                        Add(ref r.left, nodeInf, minVal, r.inf);
-                    else
-                        throw new ArgumentException("Значение нарушает свойства дерева бинарного поиска");
+                    Add(ref r.left, nodeInf, minVal, r.inf);
                 }
                 else
                 {
-                    if (nodeInf <= maxVal)
-                        Add(ref r.right, nodeInf, r.inf, maxVal);
-                    else
-                        throw new ArgumentException("Значение нарушает свойства дерева бинарного поиска");
+                    Add(ref r.right, nodeInf, r.inf, maxVal);
                 }
             }
         }
@@ -108,11 +106,7 @@ public class BinaryTree
 
     public void Add(int nodeInf)
     {
-        if (!existingValues.Contains(nodeInf))
-        {
-            Node.Add(ref tree, nodeInf, int.MinValue, int.MaxValue);
-            existingValues.Add(nodeInf);
-        }
+        Node.Add(ref tree, nodeInf, int.MinValue, int.MaxValue);
     }
 
     public void Inorder()
@@ -176,11 +170,11 @@ public class BinaryTree
                 int valToAdd;
                 if (lc > rc)
                 {
-                    valToAdd = FindValueToAdd(unbalancedNode, false); // Add to right
+                    valToAdd = FindValueToAdd(unbalancedNode, false);
                 }
                 else
                 {
-                    valToAdd = FindValueToAdd(unbalancedNode, true); // Add to left
+                    valToAdd = FindValueToAdd(unbalancedNode, true);
                 }
                 Add(valToAdd);
                 addedNodes.Add(valToAdd);
@@ -230,20 +224,12 @@ public class BinaryTree
             int maxVal = node.inf;
             int minVal = GetMinVal(node);
             val = maxVal - 1;
-            while (existingValues.Contains(val) && val > minVal)
-                val--;
-            if (val <= minVal || existingValues.Contains(val))
-                throw new ArgumentException("Нет уникальных значений для левого поддерева");
         }
         else
         {
             int minVal = node.inf;
             int maxVal = GetMaxVal(node);
             val = minVal + 1;
-            while (existingValues.Contains(val) && val < maxVal)
-                val++;
-            if (val >= maxVal || existingValues.Contains(val))
-                throw new ArgumentException("Нет уникальных значений для правого поддерева");
         }
         return val;
     }
@@ -254,7 +240,7 @@ public class BinaryTree
         while (current != null)
         {
             if (current == node)
-                return int.MinValue;
+                return -200;
             if (node.inf < current.inf)
             {
                 if (current.left == node)
@@ -266,7 +252,7 @@ public class BinaryTree
                 current = current.right;
             }
         }
-        return int.MinValue;
+        return -200;
     }
 
     private int GetMaxVal(Node node)
@@ -275,7 +261,7 @@ public class BinaryTree
         while (current != null)
         {
             if (current == node)
-                return int.MaxValue;
+                return 200;
             if (node.inf > current.inf)
             {
                 if (current.right == node)
@@ -287,6 +273,6 @@ public class BinaryTree
                 current = current.left;
             }
         }
-        return int.MaxValue;
+        return 200;
     }
 }
